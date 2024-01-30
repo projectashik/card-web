@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="cards">
+        <div class="card-front">
+          <div class="card-img">
+            <img src="./images/card-logo.svg" alt="Card Logo" />
+          </div>
+          <div class="details">
+            <p class="card-number">0000 0000 0000 0000</p>
+            <div class="meta">
+              <p class="card-holder">Card Holder</p>
+              <p class="card-expiry">
+                <span class="month">MM</span> / <span class="year">YY</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card-back">
+          <p class="cvc">000</p>
+        </div>
+      </div>
+      <form class="form">
+        <div class="form-group">
+          <label for="name" class="label">Cardholder name</label>
+          <input
+            type="text"
+            placeholder="Eg. Jane Doe"
+            class="form-control"
+            id="name"
+          />
+          <p class="error error-name"></p>
+        </div>
+        <div class="form-group">
+          <label for="number" class="label">card number</label>
+          <input
+            type="number"
+            placeholder="Eg. 0000 0000 0000 0000"
+            class="form-control"
+            id="number"
+          />
+          <p class="error error-number"></p>
+        </div>
+        <div class="group">
+          <div class="form-group">
+            <label for="expiry" class="label">expiry (mm/yy)</label>
+            <div class="group-inner">
+              <input
+                type="text"
+                placeholder="MM"
+                class="form-control"
+                id="month"
+              />
+              <input
+                type="text"
+                placeholder="YY"
+                class="form-control"
+                id="year"
+              />
+            </div>
+            <p class="error error-expiry"></p>
+          </div>
+          <div class="form-group">
+            <label for="cvc" class="label">cvc</label>
+            <input type="number" class="form-control" id="cvc" />
+            <p class="error error-cvc"></p>
+          </div>
+        </div>
+        <button type="submit">Confirm</button>
+      </form>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
